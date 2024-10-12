@@ -5,26 +5,34 @@
   <%- include('./partials/head') %>
     <title>Techies</title>
 </head>
+<style>
+  .card-img-top{
+    transition: scale(1.1);
+  }
+</style>
 
-<body>
+<body class="bg-secondary">
   <%- include('./partials/nav') %>
 
-    
-      <div class="conatainer mt-4 d-flex justify-content-evenly row row-clos-3">
-        <% blogs.forEach(blog=> { %>
-            <div class="card " style="width: 18rem;">
-              <img src="<%= blog.coverImageUrl %>" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <%= blog.title %>
-                </h5>
-                <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
-              </div>
-            </div>
-          <% }) %>
-      </div>
-     
-        <%- include('./partials/scripts') %>
+
+    <div class="conatainer mt-4 d-flex justify-content-evenly row row-clos-3 ">
+      <% blogs.forEach(blog=> { %>
+        <div class="card mb-4 bg" style="width: 18rem;">
+          <div style="transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)';"
+          onmouseout="this.style.transform='scale(1)';">
+          <img src="<%= blog.coverImageUrl %>" class="card-img-top" /></div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= blog.title %>
+            </h5>
+            <a href="/blog/<%= blog._id %>" class="btn btn-primary fw-semibold">View</a>
+          </div>
+        </div>
+        <br>
+        <% }) %>
+    </div>
+
+    <%- include('./partials/scripts') %>
 </body>
 
 </html>

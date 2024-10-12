@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid ">
-    <a class="navbar-brand " href="/"><h3 class="fw-bold">Techies</h3></a>
+    <a class="navbar-brand" href="/"><h1 class="fw-bold">Techies</h1></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,11 +8,11 @@
     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active fw-semibold" aria-current="page" href="/">Home</a>
         </li>
         <% if (locals.user) { %>
           <li class="nav-item">
-            <a class="nav-link" href="/blog/add-blog">Add blog</a>
+            <a class="nav-link fw-semibold" href="/blog/add-blog">Add blog</a>
           </li>
         </li>
         <li class="nav-item dropdown">
@@ -26,10 +26,10 @@
         </li>
         <% } else {%>
           <li class="nav-item">
-            <a class="nav-link" href="/user/signup">Create Account</a>
+            <a class="nav-link fw-semibold" href="/user/signup">Create Account</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/user/signin">Login</a>
+            <a class="nav-link fw-semibold" href="/user/signin">Login</a>
           </li>
         <% } %>
       </ul>

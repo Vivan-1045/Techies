@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <%- include('./partials/head') %>
         <title>Add-Blog</title>
 </head>
 
-<body>
+<body class="bg-secondary">
     <%- include('./partials/nav') %>
-        <div class="container">
+        <div class="container w-50 shadow mb-5 bg-white rounded ">
+            <h3 class="fw-bold d-flex justify-content-center mt-5"><u>Upload Here!</u></h3>
             <form action="/blog" method="post" enctype="multipart/form-data">
                 <div class="mt-4">
-                    <label for="title" class="title">Cover Image</label>
+                    <label for="title" class="title fw-semibold">Cover Image</label>
                     <input type="file" class="form-control"  name="coverImage" >
                 </div>
                 <div class="mt-3">
-                    <label for="title" class="title">Title</label>
+                    <label for="title" class="title fw-semibold">Title</label>
                     <input type="title" class="form-control"  name="title" placeholder="Title of post">
                 </div>
                 <div class="mt-3">
-                    <label for="floatingTextarea">Body</label>
+                    <label for="floatingTextarea" class="fw-semibold">Body</label>
                     <textarea class="form-control" placeholder="describe your post" id="floatingTextarea" name="body"></textarea>
                 </div>
-                <div class="mt-3">
-                    <button class="btn btn-primary">Submit</button>
+                <div class="mt-3 p-3 d-flex justify-content-center">
+                    <button class="btn btn-primary fw-semibold">Submit</button>
                 </div>
             </form>
         </div>

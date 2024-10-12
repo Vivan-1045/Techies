@@ -6,21 +6,26 @@
         <title>Login</title>
 </head>
 
-<body>
+<body class="bg-secondary">
     <%- include('./partials/nav') %>
-        <div class="container ">
+        <div class="container  w-50 shadow mb-5 bg-white rounded">
+            <h3 class="fw-bold d-flex justify-content-center mt-5"><u>Login Here!</u></h3>
             <form action="/user/signin" method="post">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" name="email">
+                    <label for="exampleInputEmail1" class="form-label fw-semibold">Email address</label>
+                    <input type="email" class="form-control" name="email" required>
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name="pwd" class="form-control">
+                    <label for="exampleInputPassword1" class="form-label fw-semibold">Password</label>
+                    <input type="password" name="pwd" class="form-control" required>
                 </div>
+                <div class="d-flex">
+                    <p>If you don't have any account click </p>&nbsp;<a href="/user/signup"> Sign-up</a>
+                </div>
+                <div class="p-3 d-flex justify-content-center"><button type="submit"
+                        class="btn btn-primary fw-semibold">Login</button></div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
         <%- include('./partials/scripts') %>

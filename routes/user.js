@@ -17,7 +17,7 @@ router.post("/signin", async (req, res) => {
     return res.cookie("token",token).redirect("/");
   } catch (error) {
     return res.render('signin',{
-      error : "Incorrect Email and Password And if you don't have any account then click on Create Account"
+      error : "Incorrect Email and Password"
     })
   }
 });
@@ -34,6 +34,7 @@ router.post("/signup", async (req, res) => {
     fullName,
     email,
     pwd,
+    // userProfileUrl
   });
   // return res.redirect("/");
   const token = await User.VerifyPwdGenerateToken(email, pwd);
